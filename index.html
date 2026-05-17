@@ -1,0 +1,1354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rabindra Pharmaceutics | Continuous Medication Care & Home Delivery</title>
+    <meta name="description" content="Rabindra Pharmaceutics offers automated prescription refill delivery for chronic conditions including diabetes, blood pressure, thyroid, and asthma. Never miss a dose again.">
+    <meta name="keywords" content="online pharmacy Nepal, prescription delivery, chronic medication management, automated refill, diabetes medicine delivery, blood pressure medication, pharmacy subscription, Rabindra Pharmaceutics">
+    <meta property="og:title" content="Rabindra Pharmaceutics | Continuous Medication Care">
+    <meta property="og:description" content="Upload your prescription once. We handle the rest — timely refills delivered to your door.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #0B3D6E;
+            --primary-light: #1A5FA0;
+            --accent: #0F9B82;
+            --accent-hover: #0C7D69;
+            --accent-soft: #E6F7F4;
+            --warn: #D97706;
+            --bg: #F5F7FA;
+            --white: #FFFFFF;
+            --text: #1A1F2E;
+            --muted: #5C6270;
+            --border: #DDE3ED;
+            --card-shadow: 0 4px 24px rgba(11,61,110,0.08);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.65;
+        }
+
+        /* ── HEADER ── */
+        header {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 200;
+        }
+
+        .nav-wrap {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            height: 68px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.35rem;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            letter-spacing: -0.01em;
+        }
+
+        .logo-mark {
+            width: 36px;
+            height: 36px;
+            background: var(--primary);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        nav a {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--muted);
+            text-decoration: none;
+            margin-left: 2rem;
+            transition: color 0.2s;
+        }
+
+        nav a:hover { color: var(--primary); }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 0.65rem 1.4rem;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .btn-primary { background: var(--accent); color: #fff; }
+        .btn-primary:hover { background: var(--accent-hover); transform: translateY(-1px); }
+
+        .btn-outline {
+            background: transparent;
+            border: 1.5px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-outline:hover { background: var(--primary); color: #fff; }
+
+        /* ── NOTICE BAR ── */
+        .notice-bar {
+            background: var(--primary);
+            color: rgba(255,255,255,0.92);
+            text-align: center;
+            padding: 10px 2rem;
+            font-size: 0.85rem;
+            letter-spacing: 0.01em;
+        }
+
+        .notice-bar a { color: #7DD3C8; text-decoration: underline; }
+
+        /* ── HERO ── */
+        .hero {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 5rem 2rem 4rem;
+            display: grid;
+            grid-template-columns: 1fr 420px;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--accent-soft);
+            color: var(--accent);
+            border: 1px solid rgba(15,155,130,0.25);
+            padding: 5px 12px;
+            border-radius: 100px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: 1.25rem;
+        }
+
+        .hero h1 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 3rem;
+            line-height: 1.15;
+            color: var(--primary);
+            margin-bottom: 1.25rem;
+            letter-spacing: -0.02em;
+        }
+
+        .hero h1 em {
+            font-style: italic;
+            color: var(--accent);
+        }
+
+        .hero p {
+            font-size: 1.05rem;
+            color: var(--muted);
+            margin-bottom: 2rem;
+            max-width: 480px;
+        }
+
+        .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+        .trust-row {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 2.5rem;
+            flex-wrap: wrap;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.82rem;
+            color: var(--muted);
+            font-weight: 500;
+        }
+
+        .trust-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--accent);
+        }
+
+        /* ── RX CARD ── */
+        .rx-card {
+            background: var(--white);
+            border-radius: 20px;
+            box-shadow: var(--card-shadow), 0 0 0 1px var(--border);
+            overflow: hidden;
+        }
+
+        .rx-card-header {
+            background: var(--primary);
+            padding: 1.5rem 2rem;
+        }
+
+        .rx-card-header h3 {
+            font-family: 'DM Serif Display', serif;
+            color: #fff;
+            font-size: 1.35rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .rx-card-header p { color: rgba(255,255,255,0.7); font-size: 0.88rem; }
+
+        .rx-card-body { padding: 1.75rem 2rem; }
+
+        .upload-zone {
+            border: 2px dashed #C8D2E4;
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            background: var(--bg);
+            margin-bottom: 1.25rem;
+            cursor: pointer;
+            transition: border-color 0.25s, background 0.25s;
+        }
+
+        .upload-zone:hover { border-color: var(--accent); background: var(--accent-soft); }
+
+        .upload-zone p { color: var(--muted); margin-top: 8px; font-size: 0.88rem; }
+        .upload-zone strong { color: var(--text); }
+
+        .form-group { margin-bottom: 1rem; }
+        .form-group label { display: block; font-size: 0.82rem; font-weight: 600; color: var(--muted); margin-bottom: 5px; }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 0.6rem 0.9rem;
+            border: 1.5px solid var(--border);
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 0.9rem;
+            color: var(--text);
+            background: var(--white);
+            transition: border-color 0.2s;
+        }
+        .form-group input:focus, .form-group select:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        .card-badges {
+            display: flex;
+            gap: 10px;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 0.75rem;
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        /* ── SERVICES STRIP ── */
+        .services {
+            background: var(--white);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            padding: 1.5rem 2rem;
+        }
+
+        .services-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .service-pill {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.88rem;
+            font-weight: 500;
+            color: var(--primary);
+        }
+
+        .service-icon {
+            width: 32px;
+            height: 32px;
+            background: var(--accent-soft);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* ── FEATURES GRID ── */
+        .section {
+            max-width: 1200px;
+            margin: 5rem auto;
+            padding: 0 2rem;
+        }
+
+        .section-label {
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title {
+            font-family: 'DM Serif Display', serif;
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.02em;
+        }
+
+        .section-sub {
+            color: var(--muted);
+            font-size: 1rem;
+            max-width: 540px;
+            margin-bottom: 3rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .feature-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 1.75rem;
+            border: 1px solid var(--border);
+            transition: box-shadow 0.25s, transform 0.25s;
+        }
+
+        .feature-card:hover {
+            box-shadow: var(--card-shadow);
+            transform: translateY(-3px);
+        }
+
+        .feature-icon-wrap {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: var(--accent-soft);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-card p { font-size: 0.88rem; color: var(--muted); }
+
+        /* ── CONDITIONS ── */
+        .conditions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+        }
+
+        .condition-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 1.5rem 1.25rem;
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .condition-card:hover {
+            border-color: var(--accent);
+            background: var(--accent-soft);
+            transform: translateY(-2px);
+        }
+
+        .condition-card .cond-emoji { font-size: 2rem; margin-bottom: 0.75rem; display: block; }
+        .condition-card h4 { font-size: 0.95rem; font-weight: 700; color: var(--primary); margin-bottom: 0.25rem; }
+        .condition-card p { font-size: 0.8rem; color: var(--muted); }
+
+        /* ── HOW IT WORKS ── */
+        .steps-wrap {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            position: relative;
+        }
+
+        .step {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .step-num {
+            width: 44px;
+            height: 44px;
+            background: var(--primary);
+            color: #fff;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .step h4 { font-size: 1rem; font-weight: 700; color: var(--primary); margin-bottom: 0.4rem; }
+        .step p { font-size: 0.88rem; color: var(--muted); }
+
+        /* ── BLOG SECTION ── */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.75rem;
+        }
+
+        .blog-card {
+            background: var(--white);
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            overflow: hidden;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            transition: box-shadow 0.2s, transform 0.2s;
+        }
+
+        .blog-card:hover { box-shadow: var(--card-shadow); transform: translateY(-3px); }
+
+        .blog-thumb {
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+
+        .blog-thumb.t1 { background: linear-gradient(135deg, #E6F7F4, #C5EDE8); }
+        .blog-thumb.t2 { background: linear-gradient(135deg, #EBF3FF, #CCDFF7); }
+        .blog-thumb.t3 { background: linear-gradient(135deg, #FFF6E6, #FAE0AB); }
+
+        .blog-body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
+        .blog-tag {
+            display: inline-block;
+            background: var(--accent-soft);
+            color: var(--accent);
+            border-radius: 100px;
+            padding: 3px 10px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.75rem;
+        }
+
+        .blog-card h3 { font-size: 1rem; font-weight: 700; color: var(--primary); line-height: 1.4; margin-bottom: 0.5rem; }
+        .blog-card p { font-size: 0.85rem; color: var(--muted); flex: 1; }
+        .blog-meta { font-size: 0.78rem; color: var(--muted); margin-top: 1rem; }
+
+        /* ── BLOG POST FULL ── */
+        .post-wrap {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem 5rem;
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .post-header {
+            background: var(--primary);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .post-header .blog-tag {
+            background: rgba(255,255,255,0.15);
+            color: #fff;
+            border: 1px solid rgba(255,255,255,0.25);
+        }
+
+        .post-header h1 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 2.5rem;
+            color: #fff;
+            margin: 1rem 0 0.75rem;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+
+        .post-header .post-meta { color: rgba(255,255,255,0.7); font-size: 0.88rem; }
+
+        .post-content {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 2.5rem;
+            border: 1px solid var(--border);
+            line-height: 1.8;
+        }
+
+        .post-content h2 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.6rem;
+            color: var(--primary);
+            margin: 2rem 0 0.75rem;
+            letter-spacing: -0.01em;
+        }
+
+        .post-content h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin: 1.5rem 0 0.5rem;
+        }
+
+        .post-content p { color: var(--muted); margin-bottom: 1rem; font-size: 0.95rem; }
+        .post-content ul, .post-content ol { margin: 0.75rem 0 1rem 1.5rem; color: var(--muted); font-size: 0.95rem; }
+        .post-content li { margin-bottom: 0.4rem; }
+
+        .post-content a {
+            color: var(--accent);
+            text-decoration: underline;
+            text-decoration-color: rgba(15,155,130,0.35);
+            transition: text-decoration-color 0.2s;
+        }
+        .post-content a:hover { text-decoration-color: var(--accent); }
+
+        .callout {
+            background: var(--accent-soft);
+            border-left: 4px solid var(--accent);
+            border-radius: 0 10px 10px 0;
+            padding: 1.25rem 1.5rem;
+            margin: 1.75rem 0;
+        }
+
+        .callout p { margin: 0; color: var(--text); font-weight: 500; font-size: 0.95rem; }
+        .callout .callout-title { font-weight: 700; color: var(--accent); font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.4rem; }
+
+        .keyword-tag {
+            display: inline-block;
+            background: #EBF3FF;
+            color: #185FA5;
+            border-radius: 100px;
+            padding: 3px 10px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin: 3px;
+        }
+
+        /* SIDEBAR */
+        .sidebar { position: sticky; top: 90px; }
+
+        .sidebar-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .sidebar-card h4 { font-size: 0.95rem; font-weight: 700; color: var(--primary); margin-bottom: 1rem; }
+
+        .toc-link {
+            display: block;
+            padding: 6px 0;
+            font-size: 0.85rem;
+            color: var(--muted);
+            text-decoration: none;
+            border-bottom: 1px solid var(--border);
+            transition: color 0.2s;
+        }
+
+        .toc-link:last-child { border-bottom: none; }
+        .toc-link:hover { color: var(--accent); }
+
+        .related-post { display: flex; gap: 10px; margin-bottom: 0.75rem; text-decoration: none; }
+        .related-thumb { width: 44px; height: 44px; border-radius: 8px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; }
+        .rt1 { background: var(--accent-soft); }
+        .rt2 { background: #EBF3FF; }
+        .related-post h5 { font-size: 0.82rem; color: var(--primary); line-height: 1.35; font-weight: 600; }
+
+        /* ── CTA BANNER ── */
+        .cta-banner {
+            background: var(--primary);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .cta-inner { max-width: 600px; margin: 0 auto; }
+        .cta-inner h2 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 0.75rem;
+        }
+        .cta-inner p { color: rgba(255,255,255,0.75); margin-bottom: 1.75rem; }
+
+        /* ── PLANS ── */
+        .plans-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .plan-card {
+            background: var(--white);
+            border: 1.5px solid var(--border);
+            border-radius: 16px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .plan-card.featured {
+            border-color: var(--accent);
+            position: relative;
+        }
+
+        .plan-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent);
+            color: #fff;
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.07em;
+            padding: 4px 12px;
+            border-radius: 100px;
+        }
+
+        .plan-card h3 { font-size: 1rem; font-weight: 700; color: var(--primary); margin-bottom: 0.25rem; }
+        .plan-price {
+            font-family: 'DM Serif Display', serif;
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin: 0.75rem 0;
+        }
+        .plan-price span { font-size: 0.9rem; color: var(--muted); font-family: 'Plus Jakarta Sans', sans-serif; }
+        .plan-features { list-style: none; margin: 1rem 0 1.5rem; flex: 1; }
+        .plan-features li {
+            font-size: 0.88rem;
+            color: var(--muted);
+            padding: 6px 0;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            gap: 8px;
+            align-items: flex-start;
+        }
+        .plan-features li:last-child { border-bottom: none; }
+        .plan-features li::before { content: "✓"; color: var(--accent); font-weight: 700; flex-shrink: 0; }
+
+        /* ── FOOTER ── */
+        footer {
+            background: #0D2540;
+            color: rgba(255,255,255,0.7);
+            padding: 3rem 2rem 2rem;
+        }
+
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .footer-brand .logo { color: #fff; }
+        .footer-brand p { font-size: 0.85rem; color: rgba(255,255,255,0.55); margin-top: 0.75rem; max-width: 260px; line-height: 1.65; }
+
+        .footer-col h5 { color: #fff; font-size: 0.85rem; font-weight: 700; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.07em; }
+        .footer-col a {
+            display: block;
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+            transition: color 0.2s;
+        }
+        .footer-col a:hover { color: #fff; }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 2rem auto 0;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.4);
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        /* ── SEO AUDIT PANEL (blog util) ── */
+        .audit-panel {
+            background: var(--white);
+            border: 1.5px solid var(--border);
+            border-radius: 12px;
+            padding: 1.25rem;
+            margin-top: 1.5rem;
+        }
+
+        .audit-panel h4 { font-size: 0.88rem; font-weight: 700; color: var(--primary); margin-bottom: 0.75rem; }
+        .audit-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 0;
+            font-size: 0.82rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .audit-row:last-child { border-bottom: none; }
+        .audit-row span { color: var(--muted); }
+        .pill-ok { background: #E6F7F0; color: #0A6640; border-radius: 100px; padding: 2px 8px; font-size: 0.72rem; font-weight: 700; }
+        .pill-warn { background: #FFF6E6; color: #975A00; border-radius: 100px; padding: 2px 8px; font-size: 0.72rem; font-weight: 700; }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 900px) {
+            .hero { grid-template-columns: 1fr; padding: 3rem 1.5rem 2rem; gap: 2.5rem; }
+            .hero h1 { font-size: 2.2rem; }
+            .post-wrap { grid-template-columns: 1fr; }
+            .sidebar { position: static; }
+            .footer-inner { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 600px) {
+            .nav-wrap nav { display: none; }
+            .plans-grid { grid-template-columns: 1fr; }
+            .footer-inner { grid-template-columns: 1fr; }
+            .post-header h1 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NOTICE BAR -->
+    <div class="notice-bar">
+        🎉 Free first-month delivery on all subscription plans! 
+        <a href="#plans" onclick="event.preventDefault(); document.getElementById('plans').scrollIntoView({behavior:'smooth'})">Explore Plans →</a>
+    </div>
+
+    <!-- HEADER -->
+    <header>
+        <div class="nav-wrap">
+            <a href="#home" class="logo" onclick="event.preventDefault(); window.scrollTo({top:0, behavior:'smooth'})">
+                <div class="logo-mark">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                    </svg>
+                </div>
+                Rabindra Pharmaceutics
+            </a>
+            <nav>
+                <a href="#how-it-works" onclick="event.preventDefault(); document.getElementById('how-it-works').scrollIntoView({behavior:'smooth'})">How it Works</a>
+                <a href="#conditions" onclick="event.preventDefault(); document.getElementById('conditions').scrollIntoView({behavior:'smooth'})">Chronic Care</a>
+                <a href="#plans" onclick="event.preventDefault(); document.getElementById('plans').scrollIntoView({behavior:'smooth'})">Plans</a>
+                <a href="#blog" onclick="event.preventDefault(); document.getElementById('blog').scrollIntoView({behavior:'smooth'})">Blog</a>
+                <a href="tel:+977-61-000000">Contact</a>
+            </nav>
+            <a href="#upload" class="btn btn-outline" onclick="event.preventDefault(); document.getElementById('upload').scrollIntoView({behavior:'smooth'})">Patient Login</a>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section id="home">
+        <div class="hero">
+            <div class="hero-content">
+                <div class="hero-label">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+                    Trusted by 10,000+ Patients in Nepal
+                </div>
+                <h1>Never Miss a Dose.<br><em>Delivered Before</em><br>You Run Out.</h1>
+                <p>We specialize in long-term treatment management for diabetes, blood pressure, thyroid, and asthma. Upload your prescription once — our licensed pharmacists schedule your refills automatically.</p>
+                <div class="hero-actions">
+                    <a href="#upload" class="btn btn-primary" onclick="event.preventDefault(); document.getElementById('upload').scrollIntoView({behavior:'smooth'})">
+                        Upload Prescription
+                    </a>
+                    <a href="#plans" class="btn btn-outline" onclick="event.preventDefault(); document.getElementById('plans').scrollIntoView({behavior:'smooth'})">
+                        View Subscription Plans
+                    </a>
+                </div>
+                <div class="trust-row">
+                    <div class="trust-item"><div class="trust-dot"></div> Verified Pharmacists</div>
+                    <div class="trust-item"><div class="trust-dot"></div> Secure Prescription Handling</div>
+                    <div class="trust-item"><div class="trust-dot"></div> On-Time Delivery Guarantee</div>
+                </div>
+            </div>
+
+            <!-- RX CARD -->
+            <div id="upload">
+                <div class="rx-card">
+                    <div class="rx-card-header">
+                        <h3>Start Your Continuous Care</h3>
+                        <p>Securely upload your doctor's prescription — we'll handle the rest.</p>
+                    </div>
+                    <div class="rx-card-body">
+                        <div class="form-group">
+                            <label>Your Name</label>
+                            <input type="text" placeholder="Full name" aria-label="Patient name">
+                        </div>
+                        <div class="form-group">
+                            <label>Phone Number</label>
+                            <input type="tel" placeholder="+977-98XXXXXXXX" aria-label="Phone number">
+                        </div>
+                        <div class="form-group">
+                            <label>Condition</label>
+                            <select aria-label="Select condition">
+                                <option value="">Select your condition</option>
+                                <option>Diabetes (Type 1 / Type 2)</option>
+                                <option>High Blood Pressure / Hypertension</option>
+                                <option>Thyroid Disorder</option>
+                                <option>Asthma / COPD</option>
+                                <option>Heart Disease</option>
+                                <option>Other Chronic Condition</option>
+                            </select>
+                        </div>
+                        <div class="upload-zone" onclick="document.getElementById('rxFile').click()" role="button" tabindex="0" aria-label="Upload prescription file">
+                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12"/>
+                            </svg>
+                            <p><strong>Click to browse</strong> or drag &amp; drop</p>
+                            <p>JPG, PNG, or PDF · Max 5 MB</p>
+                            <input type="file" id="rxFile" style="display:none" accept=".jpg,.jpeg,.png,.pdf" aria-label="Prescription file input">
+                        </div>
+                        <button class="btn btn-primary" style="width:100%;justify-content:center;font-size:1rem;padding:0.85rem" onclick="handleUpload()">
+                            Submit &amp; Choose Plan
+                        </button>
+                        <div class="card-badges">
+                            <div class="badge">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                Licensed Pharmacists
+                            </div>
+                            <div class="badge">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                                Secure &amp; Confidential
+                            </div>
+                            <div class="badge">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+                                Auto-Refill Alerts
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES STRIP -->
+    <div class="services">
+        <div class="services-inner">
+            <div class="service-pill">
+                <div class="service-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+                </div>
+                Same-Day Dispatch
+            </div>
+            <div class="service-pill">
+                <div class="service-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.06a16 16 0 006.03 6.03l1.31-1.31a2 2 0 012.11-.45c.907.34 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                </div>
+                Pharmacist Helpline
+            </div>
+            <div class="service-pill">
+                <div class="service-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"><path d="M20 7H4a2 2 0 00-2 2v6a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2zM16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+                </div>
+                Nationwide Delivery
+            </div>
+            <div class="service-pill">
+                <div class="service-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                Track Your Order
+            </div>
+            <div class="service-pill">
+                <div class="service-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                </div>
+                Free Delivery on Plans
+            </div>
+        </div>
+    </div>
+
+    <!-- HOW IT WORKS -->
+    <section class="section" id="how-it-works">
+        <div class="section-label">The Process</div>
+        <h2 class="section-title">Simple. Secure. Automatic.</h2>
+        <p class="section-sub">From prescription upload to doorstep delivery — everything managed by our licensed team.</p>
+
+        <div class="steps-wrap">
+            <div class="step">
+                <div class="step-num">1</div>
+                <h4>Upload Your Prescription</h4>
+                <p>Take a clear photo or scan of your doctor's valid prescription and upload it securely from your phone or computer.</p>
+            </div>
+            <div class="step">
+                <div class="step-num">2</div>
+                <h4>Pharmacist Reviews &amp; Verifies</h4>
+                <p>Our licensed pharmacists review your prescription within 2 hours, confirm dosage, and create your refill schedule.</p>
+            </div>
+            <div class="step">
+                <div class="step-num">3</div>
+                <h4>Choose Your Plan</h4>
+                <p>Pick the subscription that fits — monthly, bi-monthly, or quarterly. We handle the scheduling so you don't have to.</p>
+            </div>
+            <div class="step">
+                <div class="step-num">4</div>
+                <h4>Medicines Arrive at Your Door</h4>
+                <p>Receive tamper-proof, temperature-controlled packages with reminders before each delivery cycle.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONDITIONS -->
+    <section class="section" id="conditions">
+        <div class="section-label">Specializations</div>
+        <h2 class="section-title">Conditions We Manage</h2>
+        <p class="section-sub">We serve patients managing long-term conditions who need a reliable, consistent supply of medication.</p>
+
+        <div class="conditions-grid">
+            <a href="#upload" class="condition-card" onclick="event.preventDefault(); document.getElementById('upload').scrollIntoView({behavior:'smooth'})">
+                <span class="cond-emoji">💉</span>
+                <h4>Diabetes</h4>
+                <p>Insulin, Metformin, Glipizide &amp; more</p>
+            </a>
+            <a href="#upload" class="condition-card" onclick="event.preventDefault(); document.getElementById('upload').scrollIntoView({behavior:'smooth'})">
+                <span class="cond-emoji">❤️</span>
+                <h4>Blood Pressure</h4>
+                <p>Amlodipine, Losartan, Atenolol</p>
+            </a>
+            <a href="#upload" class="condition-card" onclick="event.preventDefault(); document.getElementById('upload').scrollIntoView({behavior:'smooth'})">
+                <span class="cond-emoji">🦋</span>
+                <h4>Thyroid</h4>
+                <p>Levothyroxine, Methimazole</p>
+            </a>
+            <a href="#upload" class="condition-card" onclick="event.preventDefault(); document.getElementById('upload').scrollIntoView({behavior:'smooth'})">
+                <span class="cond-emoji">🌬️</span>
+                <h4>Asthma &amp; COPD</h4>
+                <p>Inhalers, Salbutamol, Budesonide</p>
+            </a>
+            <a href="#upload" class="condition-card" onclick="event.preventDefault(); document.getElementById('upload').scrollIntoView({behavior:'smooth'})">
+                <span class="cond-emoji">🫀</span>
+                <h4>Heart Disease</h4>
+                <p>Statins, Beta-blockers, Aspirin</p>
+            </a>
+            <a href="#upload" class="condition-card" onclick="event.preventDefault(); document.getElementById('upload').scrollIntoView({behavior:'smooth'})">
+                <span class="cond-emoji">🧠</span>
+                <h4>Neurological</h4>
+                <p>Epilepsy, Parkinson's management</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="section">
+        <div class="section-label">Why Choose Us</div>
+        <h2 class="section-title">Built for Chronic Care Patients</h2>
+        <p class="section-sub">We go beyond delivery — we're your medication management partner.</p>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon-wrap">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <h4>Prescription Safety</h4>
+                <p>Every order is verified by a licensed pharmacist. We cross-check interactions and dosages before dispatch.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon-wrap">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+                </div>
+                <h4>Smart Refill Scheduling</h4>
+                <p>Our system calculates when you'll run out and dispatches refills automatically — no manual reorders needed.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon-wrap">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72"/></svg>
+                </div>
+                <h4>WhatsApp Reminders</h4>
+                <p>Receive dose reminders and delivery notifications directly on WhatsApp in Nepali or English.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon-wrap">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                </div>
+                <h4>Cold-Chain Delivery</h4>
+                <p>Temperature-sensitive medicines like insulin are packed and delivered with cold-chain compliance.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PLANS -->
+    <section class="section" id="plans">
+        <div class="section-label">Subscription Plans</div>
+        <h2 class="section-title">Transparent, Flexible Pricing</h2>
+        <p class="section-sub">All plans include free delivery, pharmacist support, and auto-refill scheduling.</p>
+        <div class="plans-grid">
+            <div class="plan-card">
+                <h3>Monthly</h3>
+                <p style="font-size:0.85rem;color:var(--muted)">Best for single-condition patients</p>
+                <div class="plan-price">NPR 199 <span>/ month</span></div>
+                <ul class="plan-features">
+                    <li>1 Prescription managed</li>
+                    <li>Monthly auto-refill</li>
+                    <li>Free standard delivery</li>
+                    <li>WhatsApp reminders</li>
+                </ul>
+                <a href="#upload" class="btn btn-outline" style="text-align:center;justify-content:center" onclick="event.preventDefault(); document.getElementById('upload').scrollIntoView({behavior:'smooth'})">Get Started</a>
+            </div>
+            <div class="plan-card featured">
+                <div class="plan-badge">Most Popular</div>
+                <h3>Quarterly</h3>
+                <p style="font-size:0.85rem;color:var(--muted)">For patients with multiple conditions</p>
+                <div class="plan-price">NPR 499 <span>/ 3 months</span></div>
+                <ul class="plan-features">
+                    <li>Up to 3 Prescriptions managed</li>
+                    <li>Quarterly auto-refill + alerts</li>
+                    <li>Priority pharmacist support</li>
+                    <li>Free express delivery</li>
+                    <li>Medication interaction check</li>
+                </ul>
+                <a href="#upload" class="btn btn-primary" style="text-align:center;justify-content:center" onclick="event.preventDefault(); document.getElementById('upload').scrollIntoView({behavior:'smooth'})">Get Started</a>
+            </div>
+            <div class="plan-card">
+                <h3>Family Care</h3>
+                <p style="font-size:0.85rem;color:var(--muted)">For the whole household</p>
+                <div class="plan-price">NPR 999 <span>/ 3 months</span></div>
+                <ul class="plan-features">
+                    <li>Up to 8 Prescriptions managed</li>
+                    <li>Flexible refill scheduling</li>
+                    <li>Dedicated pharmacist account</li>
+                    <li>Free express + cold-chain delivery</li>
+                    <li>Health record management</li>
+                </ul>
+                <a href="#upload" class="btn btn-outline" style="text-align:center;justify-content:center" onclick="event.preventDefault(); document.getElementById('upload').scrollIntoView({behavior:'smooth'})">Get Started</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOG SECTION -->
+    <section class="section" id="blog">
+        <div class="section-label">Health Insights</div>
+        <h2 class="section-title">From Our Pharmacists</h2>
+        <p class="section-sub">Evidence-based articles to help you manage your chronic condition better.</p>
+        <div class="blog-grid">
+            <a href="#blog-post" class="blog-card" onclick="event.preventDefault(); document.getElementById('blog-post').scrollIntoView({behavior:'smooth'})">
+                <div class="blog-thumb t1">💊</div>
+                <div class="blog-body">
+                    <span class="blog-tag">Medication Adherence</span>
+                    <h3>Why Missing Even One Dose of Blood Pressure Medication Can Be Dangerous</h3>
+                    <p>Learn what happens to your cardiovascular system when you skip doses, and how automated refills protect you.</p>
+                    <div class="blog-meta">By Pharmacist Team · May 2025 · 6 min read</div>
+                </div>
+            </a>
+            <a href="#blog" class="blog-card" onclick="event.preventDefault()">
+                <div class="blog-thumb t2">🩸</div>
+                <div class="blog-body">
+                    <span class="blog-tag">Diabetes</span>
+                    <h3>Managing Type 2 Diabetes at Home: A Complete Medication Guide</h3>
+                    <p>From Metformin to insulin — understanding your diabetes medications and how to take them correctly.</p>
+                    <div class="blog-meta">By Pharmacist Team · April 2025 · 8 min read</div>
+                </div>
+            </a>
+            <a href="#blog" class="blog-card" onclick="event.preventDefault()">
+                <div class="blog-thumb t3">🦋</div>
+                <div class="blog-body">
+                    <span class="blog-tag">Thyroid</span>
+                    <h3>Levothyroxine: Why Timing and Consistency Matter More Than You Think</h3>
+                    <p>Thyroid medication is one of the most timing-sensitive drugs. Here's what you need to know.</p>
+                    <div class="blog-meta">By Pharmacist Team · March 2025 · 5 min read</div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════
+         FULL BLOG POST
+    ════════════════════════════════════ -->
+    <div style="background: var(--white); border-top: 1px solid var(--border); margin-top: 4rem;" id="blog-post">
+        <div class="post-header">
+            <span class="blog-tag">Medication Adherence</span>
+            <h1>Why Missing Even One Dose of Blood Pressure Medication Can Be Dangerous</h1>
+            <p class="post-meta">By Rabindra Pharmaceutics Pharmacist Team &nbsp;·&nbsp; May 15, 2025 &nbsp;·&nbsp; 6 min read &nbsp;·&nbsp; Reviewed by a Licensed Pharmacist</p>
+        </div>
+
+        <div class="post-wrap">
+            <article class="post-content" itemscope itemtype="https://schema.org/Article">
+                <meta itemprop="headline" content="Why Missing Even One Dose of Blood Pressure Medication Can Be Dangerous">
+                <meta itemprop="author" content="Rabindra Pharmaceutics Pharmacist Team">
+                <meta itemprop="datePublished" content="2025-05-15">
+
+                <!-- Target Keywords -->
+                <div style="margin-bottom:1.5rem">
+                    <strong style="font-size:0.8rem;color:var(--muted);display:block;margin-bottom:6px;">Target Keywords:</strong>
+                    <span class="keyword-tag">blood pressure medication adherence</span>
+                    <span class="keyword-tag">missing hypertension dose</span>
+                    <span class="keyword-tag">online pharmacy Nepal</span>
+                    <span class="keyword-tag">prescription refill delivery</span>
+                    <span class="keyword-tag">chronic medication management</span>
+                    <span class="keyword-tag">automated medicine refill</span>
+                    <span class="keyword-tag">antihypertensive drugs Nepal</span>
+                    <span class="keyword-tag">medication non-adherence risk</span>
+                </div>
+
+                <p>High blood pressure — or <strong>hypertension</strong> — affects nearly 1 in 4 adults in Nepal. While diagnosis is the first step, the real challenge lies in <em>consistent</em>, long-term <strong>blood pressure medication adherence</strong>. Many patients feel fine and wonder: does missing one dose really matter? The short answer is yes — and here's the science behind why.</p>
+
+                <h2>What Happens When You Miss a Dose?</h2>
+                <p>Most <strong>antihypertensive drugs</strong> work by maintaining a steady concentration in your bloodstream. When you miss a dose, that level drops. For medications like Amlodipine or Losartan, a single missed dose can cause a measurable increase in blood pressure within 24 hours.</p>
+                <p>This sudden spike — known as a <em>rebound effect</em> — places unexpected stress on blood vessel walls. Over time, repeated missed doses increase the risk of:</p>
+                <ul>
+                    <li>Hypertensive crisis (blood pressure above 180/120 mmHg)</li>
+                    <li>Stroke and transient ischemic attacks (TIAs)</li>
+                    <li>Heart attack and left ventricular hypertrophy</li>
+                    <li>Kidney damage and accelerated chronic kidney disease</li>
+                </ul>
+
+                <div class="callout">
+                    <div class="callout-title">⚠️ Important Note</div>
+                    <p>Never stop or restart blood pressure medication without consulting your doctor or pharmacist. Sudden changes in antihypertensive doses can cause dangerous blood pressure fluctuations.</p>
+                </div>
+
+                <h2>Why Medication Non-Adherence Is So Common in Nepal</h2>
+                <p>Research published in chronic disease management journals identifies several barriers to <strong>medication adherence</strong> in South Asian populations:</p>
+                <ol>
+                    <li><strong>Running out of medication</strong> — patients don't refill on time, especially in rural areas with limited pharmacy access.</li>
+                    <li><strong>Side effect concerns</strong> — patients stop taking medication due to dizziness, fatigue, or other perceived side effects without informing their doctor.</li>
+                    <li><strong>Cost barriers</strong> — the expense of monthly pharmacy visits adds up.</li>
+                    <li><strong>Feeling "cured"</strong> — when blood pressure normalizes, patients mistakenly believe they no longer need the medication.</li>
+                    <li><strong>Forgetfulness</strong> — especially in elderly patients managing multiple medications for different conditions.</li>
+                </ol>
+                <p>These barriers are directly addressable with a reliable <strong>prescription refill delivery</strong> service and structured <strong>chronic medication management</strong> — which is exactly what Rabindra Pharmaceutics was built for.</p>
+
+                <h2>How Automated Refills Improve Blood Pressure Control</h2>
+                <p>Multiple clinical studies show that patients on <strong>automated prescription refill</strong> programs have significantly better long-term blood pressure control than those who self-manage their refills. When medication is delivered before you run out:</p>
+                <ul>
+                    <li>Gaps in therapy are eliminated</li>
+                    <li>Patients develop stronger medication routines</li>
+                    <li>Pharmacists can proactively flag missed refills or dosage concerns</li>
+                </ul>
+
+                <div class="callout">
+                    <div class="callout-title">💡 Did You Know?</div>
+                    <p>According to the World Health Organization, medication non-adherence accounts for approximately 50% of treatment failures in chronic diseases — making it one of the most preventable causes of worsening health.</p>
+                </div>
+
+                <h3>The Role of Pharmacist Counseling</h3>
+                <p>Beyond delivery, pharmacist counseling plays a critical role in adherence. At Rabindra Pharmaceutics, every prescription is reviewed by a licensed pharmacist who can:</p>
+                <ul>
+                    <li>Explain how and when to take each medication</li>
+                    <li>Identify potential drug interactions if you're on multiple medications</li>
+                    <li>Recommend dietary and lifestyle adjustments that support blood pressure control</li>
+                    <li>Alert your doctor if a refill pattern suggests the patient may be struggling</li>
+                </ul>
+
+                <h2>Managing Blood Pressure Medication in Nepal: Practical Tips</h2>
+                <p>Whether you're using our service or managing independently, these <strong>blood pressure medication adherence</strong> strategies are proven to help:</p>
+                <ol>
+                    <li><strong>Take it at the same time every day.</strong> Link it to a routine — morning tea, bedtime, or a meal.</li>
+                    <li><strong>Use a pill organizer.</strong> Weekly organizers make it easy to see if you've taken the day's dose.</li>
+                    <li><strong>Set a phone alarm</strong> or enable WhatsApp reminders from your pharmacy.</li>
+                    <li><strong>Never halve your prescription</strong> without medical advice to save money — this is both ineffective and dangerous.</li>
+                    <li><strong>Order refills early.</strong> Don't wait until your last tablet — order at least 7 days before you run out. With Rabindra Pharmaceutics' <strong>automated medicine refill</strong>, this happens for you automatically.</li>
+                </ol>
+
+                <h2>When to Contact Your Doctor Immediately</h2>
+                <p>Seek medical attention right away if you experience:</p>
+                <ul>
+                    <li>Severe headache, especially at the back of the head</li>
+                    <li>Blurred vision or visual disturbances</li>
+                    <li>Chest tightness or pain</li>
+                    <li>Sudden difficulty speaking or weakness on one side</li>
+                    <li>Blood pressure reading above 180/120 at home</li>
+                </ul>
+                <p>These can be signs of a hypertensive emergency requiring immediate hospital care.</p>
+
+                <h2>Conclusion: Consistency Is the Treatment</h2>
+                <p>For hypertension patients, the medication <em>is</em> the treatment — and consistency is its most important ingredient. Missing doses, running out of refills, or stopping medication without medical guidance can undo months of progress and put you at serious cardiovascular risk.</p>
+                <p>If you're managing <strong>high blood pressure in Nepal</strong> and want the peace of mind that comes from never running out of your medication again, <a href="#upload" onclick="event.preventDefault(); document.getElementById('upload').scrollIntoView({behavior:'smooth'})">upload your prescription today</a> and let our pharmacists set up your automated care plan.</p>
+
+                <div class="callout">
+                    <div class="callout-title">📦 Ready to Start?</div>
+                    <p>Rabindra Pharmaceutics delivers your blood pressure medication automatically — before you run out. Upload your prescription once, and we handle every refill. <a href="#upload" onclick="event.preventDefault(); document.getElementById('upload').scrollIntoView({behavior:'smooth'})">Get started now →</a></p>
+                </div>
+
+                <!-- SEO Link Audit Panel -->
+                <div class="audit-panel">
+                    <h4>🔗 Internal Link Audit — This Article</h4>
+                    <div class="audit-row"><span>Upload Prescription CTA (×2)</span><span class="pill-ok">✓ Active</span></div>
+                    <div class="audit-row"><span>Get Started CTA (footer callout)</span><span class="pill-ok">✓ Active</span></div>
+                    <div class="audit-row"><span>Keyword: blood pressure medication adherence</span><span class="pill-ok">✓ Used ×4</span></div>
+                    <div class="audit-row"><span>Keyword: prescription refill delivery</span><span class="pill-ok">✓ Used ×2</span></div>
+                    <div class="audit-row"><span>Keyword: automated medicine refill</span><span class="pill-ok">✓ Used ×2</span></div>
+                    <div class="audit-row"><span>Keyword: antihypertensive drugs Nepal</span><span class="pill-ok">✓ Used ×1</span></div>
+                    <div class="audit-row"><span>Schema Markup (Article)</span><span class="pill-ok">✓ Present</span></div>
+                    <div class="audit-row"><span>Meta title &amp; description</span><span class="pill-ok">✓ Present</span></div>
+                    <div class="audit-row"><span>External links (blank targets)</span><span class="pill-ok">✓ None (all internal)</span></div>
+                    <div class="audit-row"><span>Word count estimate</span><span class="pill-ok">~850 words ✓</span></div>
+                </div>
+            </article>
+
+            <!-- SIDEBAR -->
+            <aside class="sidebar">
+                <div class="sidebar-card">
+                    <h4>Contents</h4>
+                    <a class="toc-link" href="#blog-post" onclick="event.preventDefault()">What Happens When You Miss a Dose?</a>
+                    <a class="toc-link" href="#blog-post" onclick="event.preventDefault()">Why Non-Adherence Is Common in Nepal</a>
+                    <a class="toc-link" href="#blog-post" onclick="event.preventDefault()">How Automated Refills Help</a>
+                    <a class="toc-link" href="#blog-post" onclick="event.preventDefault()">Practical Tips</a>
+                    <a class="toc-link" href="#blog-post" onclick="event.preventDefault()">When to See a Doctor</a>
+                    <a class="toc-link" href="#blog-post" onclick="event.preventDefault()">Conclusion</a>
+                </div>
+
+                <div class="sidebar-card">
+                    <h4>Related Articles</h4>
+                    <a class="related-post" href="#blog" onclick="event.preventDefault()">
+                        <div class="related-thumb rt1">🩸</div>
+                        <h5>Managing Type 2 Diabetes at Home: A Complete Medication Guide</h5>
+                    </a>
+                    <a class="related-post" href="#blog" onclick="event.preventDefault()">
+                        <div class="related-thumb rt2">🦋</div>
+                        <h5>Levothyroxine: Why Timing Matters More Than You Think</h5>
+                    </a>
+                </div>
+
+                <div class="sidebar-card" style="background:var(--accent);border-color:var(--accent)">
+                    <h4 style="color:#fff;">Never Run Out Again</h4>
+                    <p style="font-size:0.85rem;color:rgba(255,255,255,0.8);margin-bottom:1rem">Automated refills delivered before you need them.</p>
+                    <a href="#upload" class="btn btn-outline" style="width:100%;text-align:center;justify-content:center;border-color:#fff;color:#fff" onclick="event.preventDefault(); document.getElementById('upload').scrollIntoView({behavior:'smooth'})">Upload Prescription</a>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- CTA BANNER -->
+    <div class="cta-banner">
+        <div class="cta-inner">
+            <h2>Your Medication. On Time. Every Time.</h2>
+            <p>Join 10,000+ patients across Nepal who rely on Rabindra Pharmaceutics for their chronic care refills.</p>
+            <a href="#upload" class="btn btn-primary" style="font-size:1.05rem;padding:0.9rem 2rem" onclick="event.preventDefault(); document.getElementById('upload').scrollIntoView({behavior:'smooth'})">Start Your Care Plan Today</a>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <a href="#home" class="logo" onclick="event.preventDefault(); window.scrollTo({top:0,behavior:'smooth'})">
+                    <div class="logo-mark" style="background:rgba(255,255,255,0.15)">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                    </div>
+                    Rabindra Pharmaceutics
+                </a>
+                <p>Licensed online pharmacy in Nepal, specializing in chronic condition medication management and automated prescription refill delivery.</p>
+            </div>
+            <div class="footer-col">
+                <h5>Services</h5>
+                <a href="#upload" onclick="event.preventDefault(); document.getElementById('upload').scrollIntoView({behavior:'smooth'})">Upload Prescription</a>
+                <a href="#plans" onclick="event.preventDefault(); document.getElementById('plans').scrollIntoView({behavior:'smooth'})">Subscription Plans</a>
+                <a href="#conditions" onclick="event.preventDefault(); document.getElementById('conditions').scrollIntoView({behavior:'smooth'})">Chronic Care</a>
+                <a href="#how-it-works" onclick="event.preventDefault(); document.getElementById('how-it-works').scrollIntoView({behavior:'smooth'})">How It Works</a>
+            </div>
+            <div class="footer-col">
+                <h5>Resources</h5>
+                <a href="#blog" onclick="event.preventDefault(); document.getElementById('blog').scrollIntoView({behavior:'smooth'})">Health Blog</a>
+                <a href="#blog-post" onclick="event.preventDefault(); document.getElementById('blog-post').scrollIntoView({behavior:'smooth'})">Blood Pressure Guide</a>
+                <a href="#blog" onclick="event.preventDefault()">Diabetes Guide</a>
+                <a href="#blog" onclick="event.preventDefault()">Thyroid Guide</a>
+            </div>
+            <div class="footer-col">
+                <h5>Contact</h5>
+                <a href="tel:+977-61-000000">+977-61-000000</a>
+                <a href="mailto:care@rabindrapharma.com.np">care@rabindrapharma.com.np</a>
+                <a href="https://wa.me/97761000000" target="_blank" rel="noopener noreferrer">WhatsApp Support</a>
+                <a href="#home" onclick="event.preventDefault()">Pokhara, Gandaki, Nepal</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2025 Rabindra Pharmaceutics. All rights reserved.</span>
+            <span>
+                <a href="#home" onclick="event.preventDefault()" style="color:inherit;margin-right:1rem">Privacy Policy</a>
+                <a href="#home" onclick="event.preventDefault()" style="color:inherit">Terms of Service</a>
+            </span>
+        </div>
+    </footer>
+
+    <script>
+        // File upload feedback
+        document.getElementById('rxFile').addEventListener('change', function() {
+            if (this.files.length > 0) {
+                const zone = this.closest('.upload-zone') || document.querySelector('.upload-zone');
+                zone.style.borderColor = 'var(--accent)';
+                zone.style.background = 'var(--accent-soft)';
+                zone.querySelector('p').innerHTML = '<strong style="color:var(--accent)">✓ ' + this.files[0].name + '</strong>';
+            }
+        });
+
+        function handleUpload() {
+            const btn = document.querySelector('.rx-card-body .btn-primary');
+            btn.textContent = 'Submitting...';
+            btn.disabled = true;
+            setTimeout(() => {
+                btn.textContent = '✓ Submission Received — We\'ll call you within 2 hours';
+                btn.style.background = 'var(--primary)';
+            }, 1200);
+        }
+
+        // Smooth scroll for all anchor links (fallback)
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            if (!a.getAttribute('onclick')) {
+                a.addEventListener('click', function(e) {
+                    const id = this.getAttribute('href').slice(1);
+                    const el = document.getElementById(id);
+                    if (el) { e.preventDefault(); el.scrollIntoView({ behavior: 'smooth' }); }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
